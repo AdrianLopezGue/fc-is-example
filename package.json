@@ -1,0 +1,38 @@
+{
+  "name": "fc-is-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "npm run clean && tsc --project ./tsconfig.json",
+    "dev": "cross-env NODE_ENV=development tsx --watch --inspect=0.0.0.0:5660 src/index.ts",
+    "start": "cross-env NODE_ENV=production node --es-module-specifier-resolution=node ./dist/index.js",
+    "serve": "npm run build && npm run start",
+    "type:check": "tsc --project ./tsconfig.json --noEmit",
+    "lint": "eslint . --ext .ts --fix",
+    "prettier": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "fastify": "^4.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-neverthrow": "^1.1.4",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.3"
+  }
+}
