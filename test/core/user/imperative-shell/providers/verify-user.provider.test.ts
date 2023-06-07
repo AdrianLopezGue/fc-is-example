@@ -18,7 +18,7 @@ describe('Verify user provider', () => {
     expect(result.isOk()).toBe(true);
   });
 
-  it('should throw error if user is not found', async () => {
+  it('should return error if user is not found', async () => {
     // Arrange
     const repository = new InMemoryUserRepository();
 
