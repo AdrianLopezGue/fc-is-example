@@ -28,12 +28,7 @@ server.put<{ Body: UserType; Reply: UserType | UserErrorType }>(
     },
   },
   async ({ body }, reply) => {
-    const repository = new InMemoryUserRepository([
-      {
-        email: 'user@user.com',
-        age: 1,
-      },
-    ]);
+    const repository = new InMemoryUserRepository([]);
 
     const providerResult = await verifyUserProvider(repository, body.email, body.name);
 
