@@ -1,3 +1,4 @@
+/* eslint-disable neverthrow/must-use-result */
 import { UnverifiedUser } from '../../../../../src/core/user/functional-core/domain/user';
 import { verifyUserUseCase } from '../../../../../src/core/user/functional-core/use-cases/verify-user';
 
@@ -17,7 +18,7 @@ describe('Verify user use case', () => {
     expect(verifiedUser.isOk()).toBe(true);
   });
 
-  it('should throw error if user is deleted', () => {
+  it('should return error if user is deleted', () => {
     // Arrange
     const unverifiedUser: UnverifiedUser = {
       email: 'user@user.com',
