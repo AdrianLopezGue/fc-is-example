@@ -20,6 +20,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module',
+    warnOnUnsupportedTypeScriptVersion: false,
   },
   root: true,
   plugins: ['@typescript-eslint', 'unicorn', 'neverthrow'],
