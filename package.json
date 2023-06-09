@@ -7,7 +7,7 @@
     "clean": "rimraf dist/",
     "build": "npm run clean && tsc --project ./tsconfig.json",
     "dev": "cross-env NODE_ENV=development tsx --watch --inspect=0.0.0.0:5660 src/index.ts",
-    "start": "cross-env NODE_ENV=production node --es-module-specifier-resolution=node ./dist/index.js",
+    "start": "cross-env NODE_ENV=production node --es-module-specifier-resolution=node ./dist/src/index.js",
     "serve": "npm run build && npm run start",
     "type:check": "tsc --project ./tsconfig.json --noEmit",
     "lint": "eslint . --ext .ts --fix",
