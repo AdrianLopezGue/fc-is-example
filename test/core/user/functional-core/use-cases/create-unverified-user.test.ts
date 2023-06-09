@@ -5,7 +5,7 @@ describe('Create unverified user use case', () => {
   it('should return an unverified user', () => {
     // Arrange
     // Act
-    const unverifiedUser = createUnverifiedUseCase('user@user.com', 'New name', 18);
+    const unverifiedUser = createUnverifiedUseCase('user@user.com', 18);
 
     // Assert
     expect(unverifiedUser.isOk()).toBe(true);
@@ -14,7 +14,7 @@ describe('Create unverified user use case', () => {
   it('should return error if age is negative', () => {
     // Arrange
     // Act
-    const unverifiedUser = createUnverifiedUseCase('user@user.com', 'New name', -1);
+    const unverifiedUser = createUnverifiedUseCase('user@user.com', -1);
 
     // Assert
     expect(unverifiedUser.isErr()).toBe(true);

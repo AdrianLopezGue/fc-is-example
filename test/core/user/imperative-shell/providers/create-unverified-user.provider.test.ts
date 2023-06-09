@@ -9,7 +9,7 @@ describe('Create unverified user provider', () => {
     const repository = new InMemoryUserRepository([]);
 
     // Act
-    const result = await createUnverifiedUserProvider(repository, email, 'User name', 1);
+    const result = await createUnverifiedUserProvider(repository, email, 1);
 
     // Assert
     expect(result.isOk()).toBe(true);
