@@ -28,6 +28,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "ts-node": { "esm": true },
-  "include": ["src/**/*", "test/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
