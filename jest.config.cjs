@@ -7,4 +7,5 @@ module.exports = {
   testEnvironmentOptions: { node: true },
   setupFilesAfterEnv: ['./test/lib/setup.ts'],
   moduleNameMapper: { '^src/(.*)': '<rootDir>/src/$1' },
+  modulePathIgnorePatterns: ['/dist/'],
 };
