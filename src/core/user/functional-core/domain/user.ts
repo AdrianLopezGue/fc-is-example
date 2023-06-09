@@ -20,12 +20,10 @@ export type User = UnverifiedUser | VerifiedUser;
 
 export const createUnverifiedUser = (user: {
   email: string;
-  name: string | undefined;
   age: number;
 }): Result<UnverifiedUser, Error> => {
   return makeAge(user.age).map(age => ({
     email: user.email,
-    name: user.name,
     age: age,
     isDeleted: false,
   }));
